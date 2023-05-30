@@ -1,0 +1,17 @@
+"""Написать программу, которая будет конвертироват строку в Camel_Case"""
+def to_camel_case(text):
+    l = list(text)
+    for i in l:
+        if i == '_' or i == '-':
+            l.remove(i)
+            text = ''.join(l)
+        elif len(text) == 0:
+             print(text)
+
+import  re
+
+text = 'the-stealth-warrior'
+print(text)
+
+new_text = re.sub(r'[-](.)', lambda m: m.group(1).upper(), text)
+print(new_text)
