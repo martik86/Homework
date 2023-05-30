@@ -1,0 +1,16 @@
+"""Напишите декоратор timer, который измеряет время выполнения функции и выводит его на экран. Используйте модуль time для измерения времени"""
+
+def decorator_function(func):
+    def wrap():
+        print("Start...")
+        func()
+        print("Finish")
+    return wrap
+
+
+@decorator_function
+def hello_world():
+    print("Hello, world!")
+
+
+hello_world()

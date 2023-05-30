@@ -1,0 +1,12 @@
+"""Написать функцию, которая принимает список и считает кол-во одинаковых элементов в нем"""
+
+from collections import Counter
+
+def count_duplicates(array):
+    result = 0
+    counter_array_values = Counter(array).values()
+    for num in counter_array_values:
+        if num != 1:
+            result += num
+        return result
+print(count_duplicates([1, 2, 3, 4]))

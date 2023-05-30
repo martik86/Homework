@@ -1,0 +1,16 @@
+"""Напишите функцию, которая принимает на вход список чисел и возвращает новый список, содержащий только те числа, которые больше среднего значения всех чисел в списке"""
+a = [23, 24, 11, 14, 13, 6, 8, 16,
+     13, 12, 9, 17, 15, 2, 7, 26]
+
+
+def get_gt_mid_value(lst: list) -> list:
+    middle_value = sum(lst) / len(lst)
+    print(middle_value)
+    result = []
+    for num in lst:
+        if num > middle_value:
+            result.append(num)
+    return result
+
+
+print(get_gt_mid_value(a))

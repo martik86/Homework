@@ -1,0 +1,18 @@
+"""Написать функцию, которая принимает список словарей, где каждый словарь представляет собой запись об ученике (с ключами 'имя', 'возраст', 'оценки'), и возвращает список словарей, отсортированный по возрасту учеников в порядке убывания средней оценки каждого ученика"""
+students =[
+    {"name": "Mark", "age": 23, "gpa": 98},
+    {"name": "John", "age": 24, "gpa": 97},
+    {"name": "George", "age": 25, "gpa": 99}]
+
+
+def get_gpa(dct: dict):
+    return dct['gpa']
+
+
+def get_age(dct: dict):
+    return dct['age']
+def custom_sort(student_obj: list) -> list:
+    return sorted(student_obj, key=get_age, reverse=True)
+
+
+print(custom_sort(students))

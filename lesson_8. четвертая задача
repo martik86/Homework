@@ -1,0 +1,15 @@
+"""Напишите функцию, которая принимает на вход список списков чисел и возвращает новый список, содержащий те же числа, но увеличенные на 1."""
+a = [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
+
+
+def plus_one(lst: list[list]) -> list[list]:
+    result = []
+    for l in lst:
+        z = []
+        for num in l:
+            z.append(num + 1)
+        result.append(z)
+    return result
+
+
+print(plus_one(a))

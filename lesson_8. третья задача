@@ -1,0 +1,13 @@
+"""Напишите функцию, которая принимает на вход список строк и возвращает новый список, содержащий те же строки, но с замененным первым символом на символ '*' (например, "hello" станет "*ello")"""
+a = ['asdjn', 'asdncxzc', 'asdjcx']
+
+
+def replace_star(lst: list[str]) -> list[str]:
+    result = []
+    symbol = "*"
+    for word in lst:
+        result.append(symbol + word[1:])
+    return result
+
+
+print(replace_star(a))

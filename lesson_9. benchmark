@@ -1,0 +1,25 @@
+from datetime import datetime
+from sympy import isprime
+
+
+def benchmark(func):
+    def wrapper():
+        start = datetime.now()
+        func()
+        print(datetime.now() - start)
+    return wrapper()
+
+
+@benchmark
+def custom_filter_circle():
+    result = []
+    for num in range(10_000):
+        if isprime(num):
+            result.append(num)
+    return result
+
+@benchmark
+def custom_filter_hof():
+    result = list(filter(lambda num: isprime(num), range(10_000)))
+
+
