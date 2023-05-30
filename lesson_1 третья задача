@@ -1,0 +1,13 @@
+"""Вы вводите c клавиатуры число - длина стороны равностороннего треугольника. Выведите высоту, площадь и периметр треугольника. Вывод должен быть вида:
+"Высота треугольника: 12.5
+Площадь треугольника: 24.3
+Периметр треугольника: 18.2"
+side = float(input("Enter triangle side value: "))
+
+perimetr = side * 3
+height = side * (3 ** 0.5) / 2
+square = height * side / 2
+
+print(f"Perimetr: {round(perimetr, 2)} cm"
+      f"\nHeight: {round(height, 2)} cm"
+      f"\nSquare: {round(square, 2)} cm")
