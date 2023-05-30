@@ -1,0 +1,5 @@
+""" Напишите функцию, которая принимает на вход список строк и возвращает наиболее часто встречающуюся строку"""
+lst = ["hello", "morning", "summer"]
+def sort_list_string(array):
+    return most_common(array)
+    print(sort_list_strings(['hello, morning, summer']))
