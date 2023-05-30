@@ -1,0 +1,9 @@
+"""Передается список, состоящий из строк и чисел, нужно вернуть новый список, содержащий только цифры"""
+a = ['a', 786, 'c', 'b', 'd', 23, 12, 3]
+int_only = []
+
+for element in a:
+    if isinstance(element, int):
+        int_only.append(element)
+
+print(int_only)
