@@ -1,0 +1,15 @@
+"""Напишите функцию, которая принимает на вход список строк и возвращает новый список, содержащий те же строки, но с замененным первым символом на символ '*' (например, "hello" станет "*ello""""
+example = ['jasd', 'kansjd', 'ajsnd', 'Ajnsd']
+
+
+def get_a_words(lst: list[str]) -> list:
+    result = []
+    symbol = 'a'
+    symbol_upper = symbol.upper()
+    for item in lst:
+        if item.startswith('jasd') or item.startswith(symbol_upper):
+            result.append(item)
+    return result
+
+
+print(get_a_words(example))
