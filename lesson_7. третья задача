@@ -1,0 +1,8 @@
+"""Напишите функцию, которая принимает на вход строку и возвращает количество слов в этой строке, в которых есть более 3-х гласных (a, e, i, o, u)"""
+text = "Good morning."
+vowels = "a,e,i,o,u"
+count = 0
+for letter in text.lower():
+    if letter in vowels:
+        count += 1
+print("quantity of vowels in text is:", count)
