@@ -1,0 +1,12 @@
+""""Напишите функцию, которая принимает на вход два списка и возвращает новый список, содержащий элементы, которые есть в обоих списках"""
+my_list_1 = [1, 2, 3]
+my_list_2 = [21, 31, 41]
+
+
+def list_gen(my_list_1, my_list_2):
+ combined_list = [my_list_1, my_list_2]
+ new_list = [i for sublist in combined_list for i in sublist]
+ return new_list
+
+
+print(list_gen(my_list_1, my_list_2))
