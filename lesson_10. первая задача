@@ -1,0 +1,20 @@
+from random import randint
+
+names = {"Alex", "Piter", "Nick", "Ile"}
+phone_number = {"80295456765", "80294567654", "80298765456", "80297869876"}
+
+
+def gen_contact_list() -> dict:
+    contacts = dict(zip(names, phone_number))
+    return {"contact_list": contacts}
+
+
+def search_contact(contact:dict, value=None):
+    phone_magazine = contact["contact_list"]
+    for name, phone in phone_magazine.items():
+        if name == value or phone == value:
+            return f"Calling {name}\n{phone}"
+    raise ValueError("Contact or name is not defined")
+
+
+print(search_contact(contact=gen_contact_list(), value="Ile"))
