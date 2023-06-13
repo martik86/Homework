@@ -1,0 +1,21 @@
+from datetime import datetime
+
+
+class Human:
+    current_year = datetime.now().year
+
+    def __init__(self, name: str, surname: str, birth_year: int):
+        self.name = name
+        self.surname = surname
+        self.birth_year = birth_year
+
+    def get_full_name(self):
+        return f"{self.name.capitalize()} {self.surname.capitalize()}"
+
+    def get_birth_year(self):
+        return f"{Human.current_year - self.birth_year} years old"
+
+
+person_1 = Human("Alex", "Johnson", 1997)
+print(person_1.get_full_name())
+print(person_1.get_birth_year())
