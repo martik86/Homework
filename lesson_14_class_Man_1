@@ -1,0 +1,35 @@
+"""Создайте класс "Человек" с атрибутами "имя", "возраст" и "рост". Используя property декоратор, реализуйте методы получения и установки значений для каждого атрибута"""
+
+
+class Man:
+    def __init__(self, name:str, age: int, height: int):
+        self.name = name
+        self.age = age
+        self.height = height
+
+    @property
+    def class_implement(self):
+        return f"{self.name}, {self.age}, {self.height}"
+
+    @class_implement.deleter
+    def class_implenet(self):
+        print("Delete values")
+        self.name = None
+        self.age = None
+        self.height = None
+
+    @class_implement.setter
+    def class_implement(self, new_values: str):
+        names, ages, heights = new_values.split(", ")
+        self.name = names
+        self.age = ages
+        self.height = heights
+
+
+man_0 = Man("Ile", 35, 180)
+print(man_0.name, man_0.age, man_0.height)
+
+man_0.class_implement = "Maria, 30, 165"
+print(man_0.name, man_0.age, man_0.height)
+
+
