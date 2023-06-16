@@ -1,0 +1,47 @@
+"""Создайте класс "Банк" с атрибутом "баланс". Используя property декоратор, реализуйте методы получения и установки значения баланса. Также добавьте методы для пополнения и снятия денег со счета"""
+
+
+class Bank:
+
+    def __init__(self, account: float = None):
+        self.account = account
+
+    @property
+    def new_account(self):
+        return self.account
+
+    @new_account.setter
+    def new_account(self, values: int):
+        new_values = values
+        self.account = new_values
+
+    @new_account.deleter
+    def new_account(self):
+        self.account = "Delete account"
+
+    def deposit(self, value):
+        if self.account is not None:
+            self.account += value
+            self.account = int(discount)
+        else:
+            print("Account closed")
+
+    def cash(self, value):
+        if self.account is not None:
+            self.account = value
+
+
+bank_0 = Bank(0)
+print(bank_0.account)
+bank_0.deposit = 10
+print(bank_0.account)
+bank_0.cash(50)
+print(bank_0.account)
+
+bank_new_account = 100_000
+print(bank_0.account)
+bank_0.cash(150_000)
+print(bank_0.account)
+bank_0.deposit(100_000)
+print_(bank_0.account)
+
