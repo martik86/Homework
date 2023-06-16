@@ -1,0 +1,38 @@
+"""Создайте класс "Телефон" с атрибутами "модель", "цвет" и "стоимость". Используя property декоратор, реализуйте методы получения и установки значений для каждого атрибута. Также добавьте метод для вычисления скидки на телефон в зависимости от его стоимости."""
+
+class IPhone:
+
+    def __init__(self, model: str, color: str, price: float):
+        self.model = model
+        self.color = color
+        self.price = price
+
+    @property
+    def class_implement(self):
+        return self.model, self.color, self.price
+
+    @class_implement.setter
+    def class_implement(self, values: str):
+        models, colors, prices = values.split(", ")
+        self.model = models
+        self.color = colors
+        self.price = int(prices)
+        return self.model, self.color, self.price
+
+    def discount(self):
+        if 1000 <= self.price <= 2000:
+            value = self.price / 10
+            self.price = self.price - value
+            return self.price
+
+    def __str__(self):
+        return self.model, self.color, self.price
+
+
+IPhone_0 = IPhone("IPhone","Red", 1400)
+print(IPhone_0.model, IPhone_0.color, IPhone_0.price)
+
+IPhone_0.class_implement = "Samsung, Green, 1000"
+print(IPhone_0.model, IPhone_0.color, IPhone_0.price)
+
+print(IPhone_0.discount())
