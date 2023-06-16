@@ -1,0 +1,29 @@
+"""Создайте класс "Круг" с атрибутом "радиус". Используя property декоратор, реализуйте методы получения и установки значения радиуса. Также добавьте метод для вычисления площади круга."""
+
+from math import pi
+
+class Circle:
+    def __init__(self, radius: float):
+        self.radius = radius
+
+    @property
+    def multi_radius(self):
+        return self.radius
+
+    @multi_radius.setter
+    def multi_radius(self, values):
+        new_radius = values
+        self.radius = new_radius
+
+    def area_of_the_circle(self):
+        return pi*self.radius**2
+
+
+area_0 = Circle(3)
+print(area_0.radius)
+print(area_0.area_of_the_circle())
+
+area_0.multi_radius = 4
+
+print(area_0.radius)
+print(area_0.area_of_the_circle())
